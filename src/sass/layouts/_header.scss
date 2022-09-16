@@ -1,0 +1,136 @@
+
+.header {
+  min-height: 6rem;
+  background-color: $whiteColor;
+  border-bottom: 1px solid $whiteColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+
+  .logo {
+    height: 4rem;
+    margin-left: 1rem;
+    flex: 0 0 10%;
+    
+    @include media(med){
+      height: 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .form {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media(small){
+      order: 1;
+    }
+
+    @include media(smallest){
+      display: none;
+    }
+
+    &-input {
+      border: none;
+      font-size: inherit;
+      font-weight: bold;
+      color: inherit;
+      border-radius: 150px;
+      padding: 1rem;
+      width: 100%;
+      background-color: #F4F2F2;
+
+      @include media(small){
+        width: 75%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      border: none;
+      background-color: #F4F2F2;
+      transform: translateX(-3rem);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-icon {
+      height: 2rem;
+      width: 2rem;
+      fill: $darkGreyColor2;
+      transition: all .4s ease;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    
+    & > * {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    & > *:hover {
+      background-color: #F4F2F2;
+    }
+
+    &-icon {
+      &-svg {
+        height: 2.5rem;
+        width: 2.5em;
+        fill: $darkGreyColor1;
+        @include media(med){
+          height: 2rem;
+          margin: 0;
+        }
+      }
+
+      &-noti {
+        height: 1.7rem;
+        width: 1.7rem;
+        text-align: center;
+        color: #FFF;
+        background-color: #EB2F64;
+        border-radius: 50%;
+        transform: translate(-12px, -4px);
+        z-index: 1;
+      }
+    }
+
+    &-img {
+      display: flex;
+      align-items: center;  
+
+      &-image {
+        height: 4rem;
+        border-radius: 50%;
+        @include media(med){
+          height: 3.5rem;
+        }
+      }
+
+      &-name {
+        @include media(med){
+          font-size: 1rem;
+          font-weight: bold;
+          argin-left: 1rem;
+        }
+      }
+    }
+  }
+}

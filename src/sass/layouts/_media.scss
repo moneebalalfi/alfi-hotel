@@ -1,0 +1,29 @@
+// Media Query
+
+@mixin media($bp) {
+  @if $bp == large-x {//1200
+    @media (max-width: 75em) {@content}
+  };
+
+  @if $bp == large{ //1100
+    @media (max-width: 68.75em) {@content} 
+  };
+
+  @if $bp == med-x{//900
+    @media (max-width: 56.25em) {@content} 
+  };
+
+  @if $bp == med{ //600
+    @media (max-width: 37.5em) {@content}
+  };
+
+  @if $bp == small{ //550
+    @media (max-width:  34.375em) {@content}
+  };
+
+  @if $bp == smallest{ //320
+    @media (max-width:  20em) {@content}
+  };
+
+ 
+}

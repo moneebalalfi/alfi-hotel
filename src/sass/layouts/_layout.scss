@@ -1,0 +1,24 @@
+
+.container {
+  max-width: 120rem;
+  background-color: #F9F8F8;
+  margin: 10rem auto;
+
+  box-shadow: 0 2rem 4rem rgba($blackColor, .5);
+
+  @include media(large-x) {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.content-container {
+  display: flex;
+
+  @include media(med-x) {
+    flex-direction: column;
+  }
+}
+
+
+
